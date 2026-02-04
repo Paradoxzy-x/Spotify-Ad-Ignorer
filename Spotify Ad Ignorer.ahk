@@ -424,14 +424,12 @@ AdCheckTimerInit(IsRestart := false) {
 
       ; Fallback incase the first PostMessage doesn't work
       While (WinExist("Spotify Free ahk_exe Spotify.exe") || AppVolume("Spotify.exe").GetMute() != 0) {
-      ;While (AppVolume("Spotify.exe").GetMute() != 0) {
         PostMessage, 0x319, , 0xE0000
         AppVolume("Spotify.exe").SetMute(0)
         Sleep, 500
 
         If (A_Index > 10)
-          msgbox, % "Unable to autoplay`r`n" WinExist("Spotify Free ahk_exe Spotify.exe") "`r`n" AppVolume("Spotify.exe").GetMute()
-          ;ThrowError("Unable to autoplay", 10)
+          ThrowError("Unable to autoplay", 10)
       }
     }
 
@@ -618,3 +616,4 @@ Uninstall() {
     Exit()
   }
 }
+
