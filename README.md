@@ -1,3 +1,8 @@
+# RIP
+[Spotify killed their API](https://developer.spotify.com/blog/2026-02-06-update-on-developer-access-and-platform-security)
+
+---
+
 # Spotify Ad Ignorer
 
 Spotify Ad Ignorer is for use with the windows desktop version of Spotify
